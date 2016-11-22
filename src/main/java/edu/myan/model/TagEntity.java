@@ -8,7 +8,7 @@ import javax.persistence.Entity;
  * Description  :
  */
 @Entity
-public class TagEntity {
+public class TagEntity extends BaseEntity{
     private String tag;
 
     public TagEntity(String tag) {

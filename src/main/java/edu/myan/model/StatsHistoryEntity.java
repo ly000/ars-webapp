@@ -1,5 +1,6 @@
 package edu.myan.model;
 
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -8,6 +9,7 @@ import javax.persistence.OneToOne;
  * <p>
  * Description  :
  */
+@Entity
 public class StatsHistoryEntity extends BaseEntity{
     @OneToOne
     private UserEntity userEntity;
