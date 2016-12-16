@@ -14,11 +14,10 @@ import java.util.List;
 public class HistoryEntity extends BaseEntity {
     @OneToOne
     private UserEntity userEntity;
-    @OneToMany
-    private List<QuestionEntity> Questions;
-    private List<Integer> answerChoice;
+    private QuestionEntity Questions;
+    private Integer answerChoice;
 
-    public HistoryEntity(UserEntity userEntity, List<QuestionEntity> questions, List<Integer> answerChoice) {
+    public HistoryEntity(UserEntity userEntity, QuestionEntity questions, Integer answerChoice) {
         this.userEntity = userEntity;
         Questions = questions;
         this.answerChoice = answerChoice;
@@ -32,19 +31,19 @@ public class HistoryEntity extends BaseEntity {
         this.userEntity = userEntity;
     }
 
-    public List<QuestionEntity> getQuestions() {
+    public QuestionEntity getQuestions() {
         return Questions;
     }
 
-    public void setQuestions(List<QuestionEntity> questions) {
+    public void setQuestions(QuestionEntity questions) {
         Questions = questions;
     }
 
-    public List<Integer> getAnswerChoice() {
+    public Integer getAnswerChoice() {
         return answerChoice;
     }
 
-    public void setAnswerChoice(List<Integer> answerChoice) {
+    public void setAnswerChoice(Integer answerChoice) {
         this.answerChoice = answerChoice;
     }
 }

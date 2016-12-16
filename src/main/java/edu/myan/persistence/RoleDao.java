@@ -1,5 +1,6 @@
 package edu.myan.persistence;
 
+import edu.myan.model.RoleEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Description  :
  */
 @Transactional
-public interface RoleDao extends CrudRepository{
+public interface RoleDao extends CrudRepository<RoleEntity,Long>{
 
 
 }
